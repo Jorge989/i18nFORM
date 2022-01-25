@@ -1,0 +1,32 @@
+.container {
+  display: flex;
+  justify-content: flex-end;
+  background-color: #161618;
+  align-items: center;
+  height: 60px;
+  padding: 10px 20px 0px 0px;
+  z-index: 999;
+}
+.AddButton {
+  display: flex;
+  color: #fde001;
+  cursor: pointer;
+  height: 30px;
+  border: 0px;
+  height: 31px;
+
+  margin-right: 1%;
+  margin-top: 0%;
+  background-color: transparent;
+  outline: 0;
+  font-size: 32px;
+  cursor: pointer;
+}
+.AddButton:hover {
+  display: flex;
+  color: #fde001;
+}
+.AddButtonIcon {
+  padding: 0px;
+  margin: 0px;
+}

@@ -1,0 +1,201 @@
+.RegisterForm {
+  width: 100%;
+  height: 100%;
+  background-color: #161618;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: 30px;
+}
+.gender {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: row;
+  width: 490px;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0px;
+}
+.genderInput {
+  display: flex;
+  flex-direction: row;
+
+  align-items: center !important;
+  justify-content: center !important;
+  width: 100px;
+}
+
+.genderInput label {
+  /* display: flex;
+  align-items: center !important;
+  justify-content: center !important;
+  flex-direction: row !important;
+  width: 100px !important;
+  background-color: brown; */
+}
+.genderLabel {
+  display: flex;
+  flex-direction: row !important;
+  align-items: center !important;
+  margin-top: 5px !important;
+  justify-content: flex-start !important;
+}
+.genderInput input {
+  padding-left: 10px;
+
+  width: 21px;
+  height: 15px;
+}
+.RegisterForm h1 {
+  color: white;
+}
+.RegisterForm label {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+  margin-top: 30px;
+}
+.RegisterForm span {
+  display: flex;
+  width: 490px;
+}
+.DateBox {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-around;
+  width: 500px;
+}
+.DateLabelContainer {
+  display: flex;
+  flex-direction: column;
+}
+.DateContainer input {
+  width: 80px;
+}
+input[type="radio"]:after {
+  width: 14px;
+  height: 14px;
+  border-radius: 15px;
+  top: -4px;
+  left: 1px;
+  position: relative;
+  background-color: #181818;
+  content: "";
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid white;
+}
+#fullnameInput {
+  margin-top: 25px !important;
+}
+input[type="radio"]:checked:after {
+  width: 14px;
+  height: 14px;
+  border-radius: 15px;
+  top: -4px;
+  left: 1px;
+  position: relative;
+  background-color: #f4ff27;
+  content: "";
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid white;
+}
+.DateContainer {
+  margin-top: 12px;
+  display: flex;
+  width: 150px;
+  color: white;
+  gap: 30px;
+}
+.DateContainer input::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+}
+.DateContainer input {
+  width: 150px;
+  color: white;
+}
+
+.RegisterForm input {
+  border: 0;
+  margin-top: 10px;
+  outline: 0;
+  color: rgba(255, 255, 255, 0.926);
+  background-color: transparent;
+  border-bottom: 1px solid white;
+  font-size: 16px;
+  padding-bottom: 2px;
+  color: rgb(155, 155, 155);
+}
+.RegisterForm select {
+  border: 0;
+  margin-top: 10px;
+  width: 200px;
+  outline: 0;
+  color: rgba(255, 255, 255, 0.926);
+  background-color: transparent;
+  border-bottom: 1px solid white;
+  font-size: 16px;
+  padding-bottom: 2px;
+  color: rgb(155, 155, 155);
+}
+.SubmitRegisterForm {
+  margin-top: 35px;
+  width: 200px;
+  height: 35px;
+  border-radius: 20px;
+  background-color: #f7db00;
+  box-shadow: 0px 2px 2px 0px rgb(0, 0, 0);
+  color: black;
+  font-size: 15px;
+  font-weight: bold;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.SubmitRegisterForm:hover {
+  background-color: #fde31a;
+  color: rgb(16, 16, 16);
+  transition: 0.5s;
+  box-shadow: 0px 1px 1px 0px rgb(51, 51, 51);
+}
+.SubmitRegisterFormloading {
+  margin-top: 35px;
+  width: 200px;
+  height: 35px;
+  border-radius: 20px;
+  background-color: #fde31a;
+  box-shadow: 0px 1px 1px 0px rgb(51, 51, 51);
+  color: rgb(16, 16, 16);
+  font-size: 15px;
+  font-weight: bold;
+  border: none;
+  outline: none;
+  cursor: auto;
+}
+.spinner {
+  animation: rotate infinite 0.9s;
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.FullNameInput {
+  width: 480px;
+
+  color: #333;
+}
+.FullNamelabel {
+  margin-top: 40px !important;
+  width: 300px;
+}
