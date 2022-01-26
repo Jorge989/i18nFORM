@@ -137,7 +137,7 @@ export default function useLanguage() {
               {languages.map(({ code, name, country_code }) => (
                 <li key={country_code}>
                   <a
-                    href="#"
+                    href="lang"
                     className={classNames("dropdown-item", {
                       disabled: currentLanguageCode === code,
                     })}
