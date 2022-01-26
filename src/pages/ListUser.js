@@ -12,7 +12,7 @@ export default function ListUser() {
   function handleDeleteUser(id) {
     setUsers((anterior) => {
       return anterior.filter((filtrado) => {
-        return id != filtrado.id;
+        return id !== filtrado.id;
       });
     });
   }
