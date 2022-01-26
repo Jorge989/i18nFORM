@@ -42,7 +42,6 @@ export default function UpdateForm() {
     filtrado[0].month ? filtrado[0].month : ""
   );
   const [year, setYear] = useState(filtrado[0].year ? filtrado[0].year : "");
-  console.log("saber", filtrado[0].gender);
 
   useEffect(() => {
     setControlAddButton(false);

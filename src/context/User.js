@@ -8,11 +8,7 @@ export default function UserProvider({ children }) {
       ? JSON.parse(localStorage.getItem("users"))
       : []
   );
-  const [updateuser, setUpdateUser] = useState(
-    JSON.parse(localStorage.getItem("users"))
-      ? JSON.parse(localStorage.getItem("users"))
-      : []
-  );
+
   const [controlAddButton, setControlAddButton] = useState(false);
   useEffect(() => {
     localStorage.setItem("users", JSON.stringify(users));

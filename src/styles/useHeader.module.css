@@ -53,9 +53,12 @@
   padding: 0px;
   margin: 0px;
 }
+
 .menu {
   display: flex;
   flex-direction: column;
   position: fixed;
   margin-right: 94%;
+}
+.menuArabian {
 }

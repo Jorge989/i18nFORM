@@ -27,5 +27,6 @@
   "confirm": "Confirm",
   "loading": "Loading...",
   "update_modal_message": "User successfully updated!",
-  "create_user": "User created successfully!"
+  "create_user": "User created successfully!",
+  "join_for_free": "Join for free!"
 }

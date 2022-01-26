@@ -56,11 +56,9 @@ const GlobeIcon = ({ width = 24, height = 24 }) => (
 );
 
 export default function useLanguage() {
-  const [showMenu, setShowMenu] = useState(false);
   const { users, setUsers, controlAddButton, setControlAddButton } = useUsers();
   const currentLanguageCode = cookies.get("i18next") || "en";
   const currentLanguage = languages.find((l) => l.code === currentLanguageCode);
-
   const { t } = useTranslation();
 
   useEffect(() => {
@@ -71,7 +69,11 @@ export default function useLanguage() {
 
   return (
     <div className={styles.container}>
-      <div className={styles.menu}>
+      <div
+        className={
+          currentLanguage.code == "ar" ? styles.menuArabian : styles.menu
+        }
+      >
         <div className="dropdown">
           <button
             className={styles.MenuButton}
@@ -88,7 +90,6 @@ export default function useLanguage() {
               <span className="dropdown-item-text">{t("menu")}</span>
             </li>
             {rotes.map((rotes) => {
-              console.log(rotes.rote);
               return (
                 <li key={rotes.id}>
                   <a
@@ -96,9 +97,6 @@ export default function useLanguage() {
                     className={classNames("dropdown-item", {
                       // disabled: rotes.id === rotes.id,
                     })}
-                    onClick={() => {
-                      console.log(rotes.id);
-                    }}
                   >
                     <span
                       className={styles.rotasName}

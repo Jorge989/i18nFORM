@@ -16,9 +16,9 @@ export default function Form() {
   const [day, setDay] = useState("");
   const [month, setMonth] = useState("");
   const [year, setYear] = useState("");
-  // const [users, setUsers] = useState([]);
+
   const [showModal, setShowModal] = useState(false);
-  // console.log(users);
+
   const [gender, setGender] = useState("");
   useEffect(() => {
     setControlAddButton(false);
@@ -298,7 +298,7 @@ export default function Form() {
         </label>
         {!isLoading && (
           <button className={styles.SubmitRegisterForm} type="submit">
-            Join for Free!
+            {t("join_for_free")}
           </button>
         )}
         {isLoading && (
@@ -307,7 +307,7 @@ export default function Form() {
             type="submit"
             disabled
           >
-            Loading... <FaSpinner className={styles.spinner} />
+            {t("loading")} <FaSpinner className={styles.spinner} />
           </button>
         )}
       </form>

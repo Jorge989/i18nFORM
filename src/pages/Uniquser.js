@@ -9,11 +9,8 @@ export default function Uniquser() {
   const { id } = useParams();
 
   const { users, setUsers, controlAddButton, setControlAddButton } = useUsers();
-  console.log("aqui", id);
-  console.log(users);
 
   const filtrado = users.filter((user) => {
-    console.log("useroid", user.id == id);
     return user.id == id;
   });
   console.log("aqui2222", filtrado);

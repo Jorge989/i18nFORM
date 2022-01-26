@@ -34,7 +34,6 @@ export default function ListUser() {
           </div>
         ) : (
           users.map((user) => {
-            console.log(user.id);
             return (
               <div className={styles.containerUser} key={user.id}>
                 <div className={styles.nameUser}>
