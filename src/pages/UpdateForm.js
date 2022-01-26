@@ -15,7 +15,6 @@ export default function UpdateForm() {
   const [showModal, setShowModal] = useState(false);
   const { id } = useParams();
 
-  const [upadteuser, setUpdateuser] = useState([]);
   const filtrado = users.filter((user) => {
     console.log("useroid", user.id == id);
     return user.id == id;

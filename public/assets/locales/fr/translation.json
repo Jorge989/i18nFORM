@@ -24,8 +24,8 @@
   "december": "Décembre",
   "not_user_found": "il n'y a pas d'utilisateurs",
   "update": "Mettre à jour l'utilisateur",
-  "confirm": "يتأكد",
-  "loading": "جار التحميل...",
+  "confirm": "Confirmer",
+  "loading": "Carregando...",
   "update_modal_message": "Utilisateur mis à jour avec succès !",
   "create_user": "Utilisateur créé avec succès !",
   "join_for_free": "Rejoignez gratuitement!"
