@@ -1,13 +1,13 @@
 import React from "react";
 import styles from "../styles/ListUser.module.css";
-import { useUsers, useEffect } from "../context/User";
+import { useUsers } from "../context/User";
 import { useTranslation } from "react-i18next";
 import { IoMdTrash } from "react-icons/io";
 import { FaEye } from "react-icons/fa";
 import { useHistory } from "react-router-dom";
 export default function ListUser() {
   const history = useHistory();
-  const { users, setUsers, controlAddButton, setControlAddButton } = useUsers();
+  const { users, setUsers, setControlAddButton } = useUsers();
   setControlAddButton(true);
   function handleDeleteUser(id) {
     setUsers((anterior) => {

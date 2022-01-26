@@ -8,7 +8,7 @@ import { ImWoman } from "react-icons/im";
 import { useHistory } from "react-router-dom";
 import { useUsers } from "../context/User";
 export default function Form() {
-  const { users, setUsers, controlAddButton, setControlAddButton } = useUsers();
+  const { setUsers, controlAddButton, setControlAddButton } = useUsers();
   const history = useHistory();
   const { t } = useTranslation();
   const [isLoading, setIsLoding] = useState(false);

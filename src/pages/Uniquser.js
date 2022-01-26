@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import styles from "../styles/Uniqueuser.module.css";
 import { useUsers } from "../context/User";
 import { useTranslation } from "react-i18next";
@@ -8,7 +8,7 @@ import { FaPencilAlt } from "react-icons/fa";
 export default function Uniquser() {
   const { id } = useParams();
 
-  const { users, setUsers, controlAddButton, setControlAddButton } = useUsers();
+  const { users, setControlAddButton } = useUsers();
 
   const filtrado = users.filter((user) => {
     return user.id == id;

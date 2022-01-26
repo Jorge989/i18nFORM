@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import i18next from "i18next";
 import cookies from "js-cookie";
@@ -56,7 +56,7 @@ const GlobeIcon = ({ width = 24, height = 24 }) => (
 );
 
 export default function useLanguage() {
-  const { users, setUsers, controlAddButton, setControlAddButton } = useUsers();
+  const { controlAddButton } = useUsers();
   const currentLanguageCode = cookies.get("i18next") || "en";
   const currentLanguage = languages.find((l) => l.code === currentLanguageCode);
   const { t } = useTranslation();
@@ -71,7 +71,7 @@ export default function useLanguage() {
     <div className={styles.container}>
       <div
         className={
-          currentLanguage.code == "ar" ? styles.menuArabian : styles.menu
+          currentLanguage.code === "ar" ? styles.menuArabian : styles.menu
         }
       >
         <div className="dropdown">
