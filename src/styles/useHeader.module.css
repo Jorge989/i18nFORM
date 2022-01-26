@@ -6,6 +6,7 @@
   height: 60px;
   padding: 10px 20px 0px 0px;
   z-index: 999;
+  margin: 0 auto;
 }
 .AddButton {
   display: flex;
@@ -29,4 +30,32 @@
 .AddButtonIcon {
   padding: 0px;
   margin: 0px;
+}
+.MenuButton {
+  display: flex;
+  color: #fde001;
+  cursor: pointer;
+  height: 30px;
+  border: 0px;
+  height: 31px;
+
+  margin-top: 0%;
+  background-color: transparent;
+  outline: 0;
+  font-size: 32px;
+  cursor: pointer;
+}
+.MenuButton:hover {
+  display: flex;
+  color: #fde001;
+}
+.MenuButtonIcon {
+  padding: 0px;
+  margin: 0px;
+}
+.menu {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  margin-right: 94%;
 }

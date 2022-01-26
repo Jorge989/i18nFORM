@@ -1,10 +1,11 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import i18next from "i18next";
 import cookies from "js-cookie";
 import classNames from "classnames";
 import styles from "../styles/useHeader.module.css";
 import { IoIosAddCircle } from "react-icons/io";
+import { BiMenu } from "react-icons/bi";
 import { useUsers } from "../context/User";
 const languages = [
   {
@@ -29,7 +30,18 @@ const languages = [
     country_code: "sa",
   },
 ];
-
+const rotes = [
+  {
+    name: "Home",
+    rote: "/",
+    id: 1,
+  },
+  {
+    name: "Usuários",
+    rote: "/listuser",
+    id: 2,
+  },
+];
 const GlobeIcon = ({ width = 24, height = 24 }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -44,9 +56,11 @@ const GlobeIcon = ({ width = 24, height = 24 }) => (
 );
 
 export default function useLanguage() {
+  const [showMenu, setShowMenu] = useState(false);
   const { users, setUsers, controlAddButton, setControlAddButton } = useUsers();
   const currentLanguageCode = cookies.get("i18next") || "en";
   const currentLanguage = languages.find((l) => l.code === currentLanguageCode);
+
   const { t } = useTranslation();
 
   useEffect(() => {
@@ -57,6 +71,49 @@ export default function useLanguage() {
 
   return (
     <div className={styles.container}>
+      <div className={styles.menu}>
+        <div className="dropdown">
+          <button
+            className={styles.MenuButton}
+            type="button"
+            id="dropdownMenuButton1"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+            style={{ color: "#f7db00" }}
+          >
+            <BiMenu />
+          </button>
+          <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+            <li>
+              <span className="dropdown-item-text">{t("menu")}</span>
+            </li>
+            {rotes.map((rotes) => {
+              console.log(rotes.rote);
+              return (
+                <li key={rotes.id}>
+                  <a
+                    href={rotes.rote}
+                    className={classNames("dropdown-item", {
+                      // disabled: rotes.id === rotes.id,
+                    })}
+                    onClick={() => {
+                      console.log(rotes.id);
+                    }}
+                  >
+                    <span
+                      className={styles.rotasName}
+                      style={{
+                        opacity: currentLanguageCode === rotes.id ? 0.5 : 1,
+                      }}
+                    ></span>
+                    {rotes.name}
+                  </a>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+      </div>
       {controlAddButton && (
         <a className={styles.AddButton} href="RegisterForm.js">
           <IoIosAddCircle className={styles.AddButtonIcon} />

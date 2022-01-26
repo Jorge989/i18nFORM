@@ -20,6 +20,17 @@ export default function UpdateForm() {
     console.log("useroid", user.id == id);
     return user.id == id;
   });
+  const addUsers = (users) => {
+    setUsers((usuariosAnteriores) => {
+      const usuariosNovos = [...usuariosAnteriores];
+      var index = usuariosAnteriores.findIndex((user) => {
+        return user.id == id;
+      });
+      usuariosNovos[index] = users;
+      return usuariosNovos;
+    });
+  };
+
   const [fullName, setFullName] = useState(
     filtrado[0].fullName ? filtrado[0].fullName : ""
   );
@@ -36,11 +47,7 @@ export default function UpdateForm() {
   useEffect(() => {
     setControlAddButton(false);
   }, [controlAddButton]);
-  const addUsers = (users) => {
-    setUsers((usuariosAnteriores) => {
-      return [...usuariosAnteriores, users];
-    });
-  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -52,7 +59,7 @@ export default function UpdateForm() {
         month: month,
         year: year,
         gender: gender,
-        id: Math.floor(Math.random() * 100),
+        id: id,
       };
       // console.log(user);
       setTimeout(() => {
@@ -317,7 +324,7 @@ export default function UpdateForm() {
         </label>
         {!isLoading && (
           <button className={styles.SubmitRegisterForm} type="submit">
-            Join for Free!
+            {t(`confirm`)}
           </button>
         )}
         {isLoading && (
