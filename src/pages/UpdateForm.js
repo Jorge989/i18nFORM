@@ -22,7 +22,7 @@ export default function UpdateForm() {
     setUsers((usuariosAnteriores) => {
       const usuariosNovos = [...usuariosAnteriores];
       var index = usuariosAnteriores.findIndex((user) => {
-        return user.id.toString() === id.toStirng();
+        return user.id == id;
       });
       usuariosNovos[index] = users;
       return usuariosNovos;
