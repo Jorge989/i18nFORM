@@ -22,7 +22,7 @@ export default function Form() {
   const [gender, setGender] = useState("");
   useEffect(() => {
     setControlAddButton(false);
-  }, [controlAddButton]);
+  }, [controlAddButton, setControlAddButton]);
   const addUsers = (users) => {
     setUsers((usuariosAnteriores) => {
       return [...usuariosAnteriores, users];

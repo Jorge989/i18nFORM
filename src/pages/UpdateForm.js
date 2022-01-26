@@ -16,14 +16,13 @@ export default function UpdateForm() {
   const { id } = useParams();
 
   const filtrado = users.filter((user) => {
-    console.log("useroid", user.id == id);
-    return user.id == id;
+    return user.id.toString() === id.toString();
   });
   const addUsers = (users) => {
     setUsers((usuariosAnteriores) => {
       const usuariosNovos = [...usuariosAnteriores];
       var index = usuariosAnteriores.findIndex((user) => {
-        return user.id == id;
+        return user.id.toString() === id.toStirng();
       });
       usuariosNovos[index] = users;
       return usuariosNovos;
@@ -44,7 +43,7 @@ export default function UpdateForm() {
 
   useEffect(() => {
     setControlAddButton(false);
-  }, [controlAddButton]);
+  }, [controlAddButton, setControlAddButton]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -85,7 +84,7 @@ export default function UpdateForm() {
               id="contactChoice1"
               name="contact"
               value="men"
-              checked={gender == "men"}
+              checked={gender === "men"}
               onChange={(e) => setGender(e.target.value)}
             />
             <label for="contactChoice1" className={styles.genderLabel}>
@@ -95,7 +94,7 @@ export default function UpdateForm() {
           </div>
           <div className={styles.genderInput}>
             <input
-              checked={gender == "woman"}
+              checked={gender === "woman"}
               type="radio"
               id="contactChoice2"
               name="contact"

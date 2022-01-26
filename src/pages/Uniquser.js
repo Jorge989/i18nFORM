@@ -7,13 +7,13 @@ import { FaEye } from "react-icons/fa";
 import { FaPencilAlt } from "react-icons/fa";
 export default function Uniquser() {
   const { id } = useParams();
-
+  console.log("aqui1", typeof id);
   const { users, setControlAddButton } = useUsers();
 
   const filtrado = users.filter((user) => {
-    return user.id == id;
+    return user.id.toString() === id.toString();
   });
-  console.log("aqui2222", filtrado);
+
   const history = useHistory();
   const { t } = useTranslation();
   setControlAddButton(false);
