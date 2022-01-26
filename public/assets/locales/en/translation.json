@@ -23,5 +23,9 @@
   "november": "November",
   "december": "Dezembro",
   "not_user_found": "there are no users",
-  "update": "Update user"
+  "update": "Update user",
+  "confirm": "Confirm",
+  "loading": "Loading...",
+  "update_modal_message": "User successfully updated!",
+  "create_user": "User created successfully!"
 }

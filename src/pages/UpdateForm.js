@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import styles from "../styles/Form.module.css";
 import { useTranslation } from "react-i18next";
-import Modal from "../pages/Modal";
+import Modal from "../pages/UpdateModal";
 import { ImMan } from "react-icons/im";
 import { FaSpinner } from "react-icons/fa";
 import { ImWoman } from "react-icons/im";
@@ -333,7 +333,7 @@ export default function UpdateForm() {
             type="submit"
             disabled
           >
-            Loading... <FaSpinner className={styles.spinner} />
+            {t(`loading`)} <FaSpinner className={styles.spinner} />
           </button>
         )}
       </form>

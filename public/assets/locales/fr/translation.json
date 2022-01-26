@@ -23,5 +23,9 @@
   "november": "Novembre",
   "december": "Décembre",
   "not_user_found": "il n'y a pas d'utilisateurs",
-  "update": "Mettre à jour l'utilisateur"
+  "update": "Mettre à jour l'utilisateur",
+  "confirm": "يتأكد",
+  "loading": "جار التحميل...",
+  "update_modal_message": "Utilisateur mis à jour avec succès !",
+  "create_user": "Utilisateur créé avec succès !"
 }

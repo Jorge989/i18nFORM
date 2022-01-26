@@ -24,5 +24,9 @@
   "november": "نوفمبر",
   "december": "ديسمبر",
   "not_user_found": "لا يوجد مستخدمون",
-  "update": "تحديث المستخدم"
+  "update": "تحديث المستخدم",
+  "confirm": "يتأكد",
+  "loading": "جار التحميل...",
+  "update_modal_message": "تم تحديث المستخدم بنجاح!",
+  "create_user": "تم إنشاء المستخدم بنجاح!"
 }
