@@ -20,9 +20,7 @@ export default function UpdateForm() {
   });
   const addUsers = (users) => {
     setUsers((usuariosAnteriores) => {
-      console.log("usuariosanteriosrs", usuariosAnteriores);
       const usuariosNovos = [...usuariosAnteriores];
-      console.log("usuariosNovos", usuariosNovos);
       var index = usuariosAnteriores.findIndex((user) => {
         return user.id.toString() === id.toString();
       });
