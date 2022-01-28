@@ -35,7 +35,7 @@ export default function UpdateForm() {
   const [gender, setGender] = useState(
     filtrado[0].gender ? filtrado[0].gender : ""
   );
-  console.log("aqui gender", gender);
+
   const [day, setDay] = useState(filtrado[0].day ? filtrado[0].day : "");
   const [month, setMonth] = useState(
     filtrado[0].month ? filtrado[0].month : ""
@@ -59,7 +59,7 @@ export default function UpdateForm() {
         gender: gender,
         id: id,
       };
-      // console.log(user);
+
       setTimeout(() => {
         addUsers(user);
         setIsLoding(false);
