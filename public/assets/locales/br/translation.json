@@ -29,5 +29,7 @@
   "loading": "Carregando...",
   "update_modal_message": "Usuário atualizado com sucesso!",
   "create_user": "Usuário criado com sucesso!",
-  "join_for_free": "Entre de graça!"
+  "join_for_free": "Entre de graça!",
+  "home": "Home",
+  "users": "Usuários"
 }

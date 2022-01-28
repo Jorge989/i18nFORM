@@ -28,5 +28,7 @@
   "loading": "Carregand...",
   "update_modal_message": "Utilisateur mis à jour avec succès !",
   "create_user": "Utilisateur créé avec succès !",
-  "join_for_free": "Rejoignez gratuitement!"
+  "join_for_free": "Rejoignez gratuitement!",
+  "home": "Domicile",
+  "users": "Utilisateurs"
 }

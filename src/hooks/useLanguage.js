@@ -7,6 +7,8 @@ import styles from "../styles/useHeader.module.css";
 import { IoIosAddCircle } from "react-icons/io";
 import { BiMenu } from "react-icons/bi";
 import { useUsers } from "../context/User";
+import { useTranslationt } from "react-i18next";
+
 const languages = [
   {
     code: "fr",
@@ -30,18 +32,7 @@ const languages = [
     country_code: "sa",
   },
 ];
-const rotes = [
-  {
-    name: "Home",
-    rote: "/",
-    id: 1,
-  },
-  {
-    name: "Usuários",
-    rote: "/listuser",
-    id: 2,
-  },
-];
+
 const GlobeIcon = ({ width = 24, height = 24 }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -60,7 +51,18 @@ export default function useLanguage() {
   const currentLanguageCode = cookies.get("i18next") || "en";
   const currentLanguage = languages.find((l) => l.code === currentLanguageCode);
   const { t } = useTranslation();
-
+  const rotes = [
+    {
+      name: `${t("home")}`,
+      rote: "/",
+      id: 1,
+    },
+    {
+      name: `${t("users")}`,
+      rote: "/listuser",
+      id: 2,
+    },
+  ];
   useEffect(() => {
     console.log("Setting page stuff");
     document.body.dir = currentLanguage.dir || "ltr";
