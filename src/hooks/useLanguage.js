@@ -7,7 +7,6 @@ import styles from "../styles/useHeader.module.css";
 import { IoIosAddCircle } from "react-icons/io";
 import { BiMenu } from "react-icons/bi";
 import { useUsers } from "../context/User";
-import { useTranslationt } from "react-i18next";
 
 const languages = [
   {
