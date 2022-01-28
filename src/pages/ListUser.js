@@ -16,14 +16,7 @@ export default function ListUser() {
       });
     });
   }
-
-  // const handleDelete = (id) => {
-  //   setEvents((anterior) => {
-  //     return anterior.filter((filtrado) => {
-  //       return id != filtrado.id;
-  //     });
-  //   });
-  // };
+  console.log("listuser", users);
   const { t } = useTranslation();
   return (
     <>

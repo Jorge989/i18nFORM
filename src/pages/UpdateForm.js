@@ -20,9 +20,11 @@ export default function UpdateForm() {
   });
   const addUsers = (users) => {
     setUsers((usuariosAnteriores) => {
+      console.log("usuariosanteriosrs", usuariosAnteriores);
       const usuariosNovos = [...usuariosAnteriores];
+      console.log("usuariosNovos", usuariosNovos);
       var index = usuariosAnteriores.findIndex((user) => {
-        return user.id === id;
+        return user.id.toString() === id.toString();
       });
       usuariosNovos[index] = users;
       return usuariosNovos;
@@ -63,7 +65,7 @@ export default function UpdateForm() {
       setTimeout(() => {
         addUsers(user);
         setIsLoding(false);
-
+        console.log("awui", user);
         history.push("/listuser");
       }, 2000);
       setTimeout(() => {
