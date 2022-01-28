@@ -33,8 +33,9 @@ export default function UpdateForm() {
     filtrado[0].fullName ? filtrado[0].fullName : ""
   );
   const [gender, setGender] = useState(
-    filtrado[0].gender ? filtrado[0].gedner : ""
+    filtrado[0].gender ? filtrado[0].gender : ""
   );
+  console.log("aqui gender", gender);
   const [day, setDay] = useState(filtrado[0].day ? filtrado[0].day : "");
   const [month, setMonth] = useState(
     filtrado[0].month ? filtrado[0].month : ""

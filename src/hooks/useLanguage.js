@@ -136,7 +136,7 @@ export default function useLanguage() {
               </li>
               {languages.map(({ code, name, country_code }) => (
                 <li key={country_code}>
-                  <a
+                  <button
                     href="#"
                     className={classNames("dropdown-item", {
                       disabled: currentLanguageCode === code,
@@ -152,7 +152,7 @@ export default function useLanguage() {
                       }}
                     ></span>
                     {name}
-                  </a>
+                  </button>
                 </li>
               ))}
             </ul>
